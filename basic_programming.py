@@ -16,11 +16,11 @@ a = b = 5
 a, b = 5, 10
 a, b = b, a
 
-"""
-do something with the variables:"""
-
 print(a)
-print(a+b)
+
+
+""" try printing the sum of two variables"""
+
 
 """coding is more than just integers"""
 
@@ -47,12 +47,18 @@ print(my_string_variable + ' playyya')
 my_randomly_organised_stuff = [1, 55, 218, 'cheese', 14, my_string_variable, 55, 1]
 my_number_list = [1, 55, 218, 555, 222, 2123, 55, 1]
 
-"""indexing """
-my_randomly_organised_stuff[0]
-my_randomly_organised_stuff[3]
-my_randomly_organised_stuff[-1]
-my_randomly_organised_stuff[-5]
+"""indexing - i.e. getting stuff out of lists/arrays/etc"""
 
+my_randomly_organised_stuff[0]
+
+"""get the 3rd element of the list"""
+
+my_randomly_organised_stuff[-1]
+
+"""get the 3rd element from the end of the list"""
+
+
+"""tuples"""
 my_randomly_organised_tuple = (1, 55, 218, 'cheese', 14, my_string_variable, 55, 1)
 my_randomly_organised_tuple[3]
 
@@ -69,6 +75,7 @@ my_randomly_organised_tuple[3] = 'gouda'
 my_tuple = (1, 5, 6, 60, 200, 20)
 a, b, c, d, e, f = my_tuple
 a, *b, c = my_tuple
+
 """ try to split the tuple such that the first three elements go into a single variable"""
 
 """- dictionaries, arrays and sets"""
@@ -79,16 +86,12 @@ my_set_of_randomly_organised_stuff.intersection(my_number_set)
 
 
 my_dictionary_of_stuff = {'stringy_things': ['cheese', my_string_variable], 'numerical_things': [1, 55, 218, 14], 'the number one': 1}
-
-"""keys dont have to be strings"""
-
-my_dictionary_of_stuff = {'stringy_things': ['cheese', my_string_variable], 'numerical_things': [1, 55, 218, 14], 'the number one': 1}
 my_dictionary_of_stuff.keys()
 my_dictionary_of_stuff.values()
 my_dictionary_of_stuff.items()
 
-my_dictionary_of_stuff['stringy_things']
-my_dictionary_of_stuff['stringy_things'][0]
+
+"""indexing: can you get the cheese out?"""
 
 """ make a dictionary of your own that uses numbers as keys and strings as values"""
 
