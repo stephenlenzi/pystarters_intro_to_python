@@ -81,7 +81,7 @@ a, *b, c = my_tuple
 """- dictionaries, arrays and sets"""
 
 my_set_of_randomly_organised_stuff = set(my_randomly_organised_stuff)  # casting from a list to a set
-my_number_set = set(my_randomly_organised_stuff)
+my_number_set = set(my_number_list)
 my_set_of_randomly_organised_stuff.intersection(my_number_set)
 
 
