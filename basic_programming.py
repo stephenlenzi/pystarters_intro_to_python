@@ -9,7 +9,10 @@ A variable is something you declare, just a name you give to some value/computat
 """
 
 
-"""Assigning variables"""
+"""
+Assigning variables
+    - we can assign values to names that we choose, and these are called variables
+"""
 
 a = 5
 b = 10
@@ -38,13 +41,14 @@ print(type(5.6))
 print(type('text'))
 
 
-"""- Data types
-    basic types (integers, floats, strings)
-    data types behave differently and do different things
+"""
+Data types
+   - basic types (integers, floats, strings)
+   - data types behave differently and do different things
 
-    https://docs.python.org/3/library/stdtypes.html
+    https://docs.python.org/3/library/stdtypes.html  -> visit this website, use it as a resource
 
-    """
+"""
 
 my_first_name = 'Stephen'
 my_last_name = 'Lenzi'
@@ -150,9 +154,13 @@ for i, item in enumerate(my_dictionary_of_stuff.items()):
 
 """"Write a loop that iterates through my_number_list and adds the values to a variable called running_total"""
 
-"""Conditional statements
+"""
+Conditional statements
+    - Sometimes you want code to execute only if certain criteria are met
+    - One way of achieving this is using conditional statements (if) 
     
-    What if we only want to add numbers that fulfil some specific criteria?"""
+    What if we only want to add numbers that fulfil some specific criteria?
+"""
 
 running_total = 0
 for x in my_number_list:
@@ -162,9 +170,9 @@ for x in my_number_list:
     elif x < 200:
         print('this number is too small to print')
     elif x == 200:
-        print('200')
+        print('this number is exactly 200, what are the chances of that?!')
     else:
-        print('if you are seeing this something has gone wrong')
+        print('If you are seeing this something has gone wrong')
 
 """
 What if instead of my_number_list you do this with my_randomly_organised_stuff
