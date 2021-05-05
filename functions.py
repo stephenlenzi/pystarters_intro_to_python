@@ -3,8 +3,8 @@
 get coordinates when a mouse is in a particular part of the coordinate space, and """
 
 
-a=27
-b=8
+a = 27
+b = 8
 
 
 def add():
@@ -12,7 +12,9 @@ def add():
     b = 10
     return a + b
 
+type(add)
 add()
+
 
 
 def add(a, b):

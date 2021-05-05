@@ -99,7 +99,6 @@ a, *b, c = my_tuple
 
 """ try to split the tuple such that the first three elements go into a single variable"""
 
-
 """- dictionaries, arrays and sets"""
 
 my_set_of_randomly_organised_stuff = set(my_randomly_organised_stuff)  # casting from a list to a set
