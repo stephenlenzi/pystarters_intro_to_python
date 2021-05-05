@@ -1,4 +1,3 @@
-
 """
 Programming is essentially a list of commands that are executed in order to produce some output
 To keep track of the data, and to make it human-readable, we give names to the outputs at various points. These named
@@ -6,12 +5,22 @@ data are called variables.
 
 There are lots of different kinds of variables types that you will encounter. We will cover some simple ones.
 
-- Variables
 A variable is something you declare, just a name you give to some value/computation so that you can read your code
 """
+
+
+"""Assigning variables"""
+
 a = 5
 b = 10
+
+print(b)
+
+"We can define new variables using existing ones"
+
 c = a * b
+print(c)
+
 a = b = 5
 a, b = 5, 10
 a, b = b, a
@@ -19,32 +28,40 @@ a, b = b, a
 print(a)
 
 
-""" try printing the sum of two variables"""
+"""try printing the sum of two variables"""
 
 
 """coding is more than just integers"""
 
 print(type(5))
+print(type(5.6))
+print(type('text'))
+
 
 """- Data types
     basic types (integers, floats, strings)
     data types behave differently and do different things
-    
+
     https://docs.python.org/3/library/stdtypes.html
-    
+
     """
 
-my_string_variable = 'heyyyyyyyyya'
-print(my_string_variable)
-print(type(my_string_variable))
-print(my_string_variable + ' playyya')
+my_first_name = 'Stephen'
+my_last_name = 'Lenzi'
 
+my_full_name = my_first_name + ' ' + my_last_name
+
+print(my_first_name)
+print(type(my_first_name))
+
+print(my_full_name)
 
 """what happens if you try to add two different types?"""
 
-"""dealing with many things (lists, tuples)"""
 
-my_randomly_organised_stuff = [1, 55, 218, 'cheese', 14, my_string_variable, 55, 1]
+"""dealing with many things (lists, tuples)"""
+my_empty_list = []
+my_randomly_organised_stuff = [1, 55, 218, 'cheese', 14, my_full_name, 55, 1]
 my_number_list = [1, 55, 218, 555, 222, 2123, 55, 1]
 
 """indexing - i.e. getting stuff out of lists/arrays/etc"""
@@ -55,15 +72,17 @@ my_randomly_organised_stuff[0]
 
 my_randomly_organised_stuff[-1]
 
-"""get the 3rd element from the end of the list"""
+"""get the 3rd element from the end of the list by indexing"""
 
+"""adding things to a list"""
+my_empty_list.append('cheese')
 
 """tuples"""
-my_randomly_organised_tuple = (1, 55, 218, 'cheese', 14, my_string_variable, 55, 1)
+my_randomly_organised_tuple = (1, 55, 218, 'cheese', 14, my_full_name, 55, 1)
 my_randomly_organised_tuple[3]
 
 
-"""- mutability"""
+"""- mutability: sometimes you want to change the data"""
 my_randomly_organised_stuff[3] = 'gouda'
 
 """- print the list, see that is has changed
@@ -71,12 +90,15 @@ my_randomly_organised_stuff[3] = 'gouda'
 
 my_randomly_organised_tuple[3] = 'gouda'
 
-""""- tuple unpacking"""
+""""- unpacking"""
 my_tuple = (1, 5, 6, 60, 200, 20)
 a, b, c, d, e, f = my_tuple
 a, *b, c = my_tuple
 
+"""what are the types of a, b and c?"""
+
 """ try to split the tuple such that the first three elements go into a single variable"""
+
 
 """- dictionaries, arrays and sets"""
 
@@ -84,8 +106,10 @@ my_set_of_randomly_organised_stuff = set(my_randomly_organised_stuff)  # casting
 my_number_set = set(my_number_list)
 my_set_of_randomly_organised_stuff.intersection(my_number_set)
 
+my_dictionary_of_stuff = {'stringy_things': ['cheese', my_full_name],
+                          'numerical_things': [1, 55, 218, 14],
+                          'the number one': 1}
 
-my_dictionary_of_stuff = {'stringy_things': ['cheese', my_string_variable], 'numerical_things': [1, 55, 218, 14], 'the number one': 1}
 my_dictionary_of_stuff.keys()
 my_dictionary_of_stuff.values()
 my_dictionary_of_stuff.items()
@@ -97,10 +121,14 @@ my_dictionary_of_stuff.items()
 
 
 """- Loops
-    - what if we have lots of numbers to add together
+    - sometimes you want to run snippets of code many times
+    - e.g. what if we have 100 numbers to add together, it would be tiresome to write 100 lines of code
     - loop through each element in a list
     - for each vs for i in
 """
+
+for i in range(10):
+    print(i)
 
 for number in my_number_list:
     print(number)
@@ -110,14 +138,13 @@ for x in my_number_list:
 """maybe this does not work as expected. what result do you get? can you figure out what is happening?"""
 
 
-"""getting the loop iteration"""
+"""getting (and using) the loop iteration"""
 
 for item in my_dictionary_of_stuff.items():
     print(item)
 
 for i, item in enumerate(my_dictionary_of_stuff.items()):
     print(i, item)
-
 
 """Conditional statements
     - what if we only want to add numbers that fulfil some specific criteria?"""
@@ -135,9 +162,11 @@ for x in my_number_list:
         print('if you are seeing this something has gone wrong')
 
 """what if instead of the number list you do this with my_randomly_organised_stuff
-    - can you modify this code so that it still works?
-    - can you make it subtract 50 from the total if the value is a string?
+    - why doesn't it work?
+    - can you modify this code so that it runs to completion without producing an error?
+    - can you make it subtract 50 from the total if the x is a string?
     """
+
 
 
 """Installing packages with pip
@@ -149,31 +178,37 @@ install numpy, matplotlib and pandas
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-x = np.random.normal(np.ones(5000))
-y = np.random.normal(np.ones(5000))
+x = np.random.normal(np.zeros(500))
+y = np.random.normal(np.zeros(500))
 
 plt.figure()
 plt.scatter(x, y, color='k')
+
 plt.show()
 
 
-"""replot the data, but plot making sure the top left quadrant is red and the bottom left quadrant black"""
+"""using what we have learned about loops, and conditional statements, replot each quadrant in a different color
+
+Bonus: try to achieve the same using np.logical_and()
+"""
 
 """Python can be executed in different ways. Integrated Development Environments (IDEs) allow you do to this in a user
 friendly way (think Pycharm, or MATLAB). However, the simplest thing we can do is run python ourselves from the
 command line.
 
+make a script (called my_first_script.py)
 
-make a script
 the data is a track (x,y positions) of a mouse running around a box
-    - load using numpy
+    - load using numpy or pandas
     - plot the data
-    - cut the data down to the first minute and plot that on top in a different color
+    - cut the data down to the first 1000 frames and plot that on top in a different color
     - find the points where the mouse crosses the 200 line in x
-    - plot a red dot at these x, y locations 
-    - print the estimated x_speed to the console (hint the x speed is in the csv) 
+    - and the corresponding points in y(hint: try using numpy.where())
+    - plot a red dot at these x, y locations (use plt.scatter)
+    - print the estimated x_speed at these locations to the console (hint the x speed is in the csv) 
     - save the figure
 
+    - try to do this again for the last 500 frames, with a crossing value of 400 (is it easy for you to change?)
 """
+
 
