@@ -59,7 +59,9 @@ print(my_first_name)
 print(type(my_first_name))
 print(my_full_name)
 
-"""what happens if you try to add two different types together?"""
+"""what happens if you try to add two different types together?
+TRY THIS: add my_full_name and a number together
+"""
 
 
 """some data types allow you to deal with many things (e.g. lists, tuples)"""
@@ -72,38 +74,49 @@ my_number_list = [1, 55, 218, 555, 222, 2123, 55, 1]
 
 my_randomly_organised_stuff[0]
 
-"""get the 3rd element of the list"""
+"""TRY THIS: get the 3rd element of the list"""
 
 my_randomly_organised_stuff[-1]
 
-"""get the 3rd element from the end of the list by indexing"""
+"""TRY THIS: get the 3rd element from the end of the list by indexing"""
 
 """adding things to a list"""
 my_empty_list.append('cheese')
 
 """tuples"""
 my_randomly_organised_tuple = (1, 55, 218, 'cheese', 14, my_full_name, 55, 1)
-my_randomly_organised_tuple[3]
+
+"""TRY THIS: get the cheese from the tuple"""
 
 
-"""- mutability: sometimes you want to change the data"""
+"""
+Mutability: sometimes you want to change the data
+    - lists are good for this, it's what we call mutable 
+    - other data types don't allow it, they're what we call immutable
+
+"""
 my_randomly_organised_stuff[3] = 'gouda'
 
-"""- print the list, see that is has changed
-   - what happens if you do the same thing for my_randomly_organised_tuple?
-   - what happens if you try to append to a tuple?
+"""
+TRY THIS: print the list, see that is has changed
+TRY THIS: try to assign a new value to my_randomly_organised_tuple?
+    - does it work the same as for the list? if not, why not?
 """
 
 my_randomly_organised_tuple[3] = 'gouda'
 
-""""unpacking"""
+""""
+Unpacking
+    - there are some neat ways of assigning variables
+"""
 my_tuple = (1, 5, 6, 60, 200, 20)
 a, b, c, d, e, f = my_tuple
 a, *b, c = my_tuple
 
-"""what are the types of a, b and c?"""
+"""TRY THIS: Determine types of a, b and c?"""
 
-"""try to split the tuple such that the first three elements go into a single variable"""
+"""TRY THIS: by unpacking variables, split the tuple such that the first three elements go into a single variable
+ and the rest into different variables"""
 
 """Dictionaries, Arrays and Sets"""
 
@@ -120,9 +133,10 @@ my_dictionary_of_stuff.values()
 my_dictionary_of_stuff.items()
 
 
-"""Indexing: can you access cheese from the dictionary?"""
+"""Indexing: 
+    TRY THIS: can you access cheese from the dictionary?"""
 
-"""Make a dictionary of your own that uses numbers as keys and strings as values"""
+""" TRY THIS: Make a dictionary of your own that uses numbers as keys and strings as values"""
 
 
 """ Loops
@@ -152,7 +166,9 @@ for item in my_dictionary_of_stuff.items():
 for i, item in enumerate(my_dictionary_of_stuff.items()):
     print(i, item)
 
-""""Write a loop that iterates through my_number_list and adds the values to a variable called running_total"""
+""""TRY THIS: Write a loop that iterates through my_number_list and adds the values to a variable called running_total
+at each iteration, print the iteration number and the current running total"""
+
 
 """
 Conditional statements
@@ -176,9 +192,10 @@ for x in my_number_list:
 
 """
 What if instead of my_number_list you do this with my_randomly_organised_stuff
+    TRY THIS: run the same code but replace my_number_list with my_randomly_organised_stuff
     - does it work the same way? If not, why not?
-    - can you modify this code so that it runs to completion without triggering an error?
-    - can you modify the code such that 50 is subtracted from the total if x is a string?
+    - TRY THIS: can you modify this code so that it runs to completion without triggering any errors?
+    - TRY THIS: can you modify the code such that 50 is subtracted from the total if x is a string?
 """
 
 
@@ -200,7 +217,7 @@ plt.scatter(x, y, color='k')
 plt.show()
 
 
-"""using what we have learned about loops, and conditional statements, replot each quadrant in a different color
+"""TRY THIS: Using what we have learned today about loops, and conditional statements, replot each quadrant in a different color
 
 Bonus: try to achieve the same using np.logical_and()
 """
