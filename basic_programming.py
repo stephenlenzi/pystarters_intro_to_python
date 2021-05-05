@@ -53,15 +53,15 @@ my_full_name = my_first_name + ' ' + my_last_name
 
 print(my_first_name)
 print(type(my_first_name))
-
 print(my_full_name)
 
-"""what happens if you try to add two different types?"""
+"""what happens if you try to add two different types together?"""
 
 
-"""dealing with many things (lists, tuples)"""
+"""some data types allow you to deal with many things (e.g. lists, tuples)"""
 my_empty_list = []
 my_randomly_organised_stuff = [1, 55, 218, 'cheese', 14, my_full_name, 55, 1]
+
 my_number_list = [1, 55, 218, 555, 222, 2123, 55, 1]
 
 """indexing - i.e. getting stuff out of lists/arrays/etc"""
@@ -86,20 +86,22 @@ my_randomly_organised_tuple[3]
 my_randomly_organised_stuff[3] = 'gouda'
 
 """- print the list, see that is has changed
-   - what happens if you do the same thing for my_randomly_organised_tuple?"""
+   - what happens if you do the same thing for my_randomly_organised_tuple?
+   - what happens if you try to append to a tuple?
+"""
 
 my_randomly_organised_tuple[3] = 'gouda'
 
-""""- unpacking"""
+""""unpacking"""
 my_tuple = (1, 5, 6, 60, 200, 20)
 a, b, c, d, e, f = my_tuple
 a, *b, c = my_tuple
 
 """what are the types of a, b and c?"""
 
-""" try to split the tuple such that the first three elements go into a single variable"""
+"""try to split the tuple such that the first three elements go into a single variable"""
 
-"""- dictionaries, arrays and sets"""
+"""Dictionaries, Arrays and Sets"""
 
 my_set_of_randomly_organised_stuff = set(my_randomly_organised_stuff)  # casting from a list to a set
 my_number_set = set(my_number_list)
@@ -114,12 +116,12 @@ my_dictionary_of_stuff.values()
 my_dictionary_of_stuff.items()
 
 
-"""indexing: can you get the cheese out?"""
+"""Indexing: can you access cheese from the dictionary?"""
 
-""" make a dictionary of your own that uses numbers as keys and strings as values"""
+"""Make a dictionary of your own that uses numbers as keys and strings as values"""
 
 
-"""- Loops
+""" Loops
     - sometimes you want to run snippets of code many times
     - e.g. what if we have 100 numbers to add together, it would be tiresome to write 100 lines of code
     - loop through each element in a list
@@ -134,6 +136,7 @@ for number in my_number_list:
 
 for x in my_number_list:
     print(number)
+
 """maybe this does not work as expected. what result do you get? can you figure out what is happening?"""
 
 
@@ -145,14 +148,17 @@ for item in my_dictionary_of_stuff.items():
 for i, item in enumerate(my_dictionary_of_stuff.items()):
     print(i, item)
 
-"""Conditional statements
-    - what if we only want to add numbers that fulfil some specific criteria?"""
+""""Write a loop that iterates through my_number_list and adds the values to a variable called running_total"""
 
-total = 0
+"""Conditional statements
+    
+    What if we only want to add numbers that fulfil some specific criteria?"""
+
+running_total = 0
 for x in my_number_list:
     if x > 200:
         print(x)
-        total += x
+        running_total += x
     elif x < 200:
         print('this number is too small to print')
     elif x == 200:
@@ -160,12 +166,12 @@ for x in my_number_list:
     else:
         print('if you are seeing this something has gone wrong')
 
-"""what if instead of the number list you do this with my_randomly_organised_stuff
-    - why doesn't it work?
-    - can you modify this code so that it runs to completion without producing an error?
-    - can you make it subtract 50 from the total if the x is a string?
-    """
-
+"""
+What if instead of my_number_list you do this with my_randomly_organised_stuff
+    - does it work the same way? If not, why not?
+    - can you modify this code so that it runs to completion without triggering an error?
+    - can you modify the code such that 50 is subtracted from the total if x is a string?
+"""
 
 
 """Installing packages with pip
